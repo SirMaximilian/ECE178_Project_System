@@ -1,5 +1,5 @@
 Assembler report for ECE_178_Full_System
-Wed Oct 21 23:29:43 2020
+Thu Nov 19 03:21:16 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -39,7 +39,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Oct 21 23:29:43 2020 ;
+; Assembler Status      ; Successful - Thu Nov 19 03:21:16 2020 ;
 ; Revision Name         ; ECE_178_Full_System                   ;
 ; Top-level Entity Name ; ECE_178_Full_System                   ;
 ; Family                ; Cyclone IV E                          ;
@@ -89,14 +89,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
-    Info: Processing started: Wed Oct 21 23:29:40 2020
+    Info: Processing started: Thu Nov 19 03:21:13 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off ECE_178_Full_System -c ECE_178_Full_System
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4710 megabytes
-    Info: Processing ended: Wed Oct 21 23:29:43 2020
+    Info: Peak virtual memory: 4711 megabytes
+    Info: Processing ended: Thu Nov 19 03:21:16 2020
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 

@@ -139,7 +139,7 @@
   <sld_infos>
     <sld_info hpath="ECE178_nios_20_1:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME ECE178_nios_20_1 HAS_SOPCINFO 1 GENERATION_ID 1603348126"/>
+        <assignment_value text="QSYS_NAME ECE178_nios_20_1 HAS_SOPCINFO 1 GENERATION_ID 1605784816"/>
       </assignment_values>
       <parameters/>
     </sld_info>

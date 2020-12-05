@@ -1,5 +1,5 @@
 Fitter report for ECE_178_Full_System
-Wed Oct 21 23:29:38 2020
+Thu Nov 19 03:21:11 2020
 Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
@@ -73,7 +73,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Oct 21 23:29:38 2020       ;
+; Fitter Status                      ; Successful - Thu Nov 19 03:21:10 2020       ;
 ; Quartus Prime Version              ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                      ; ECE_178_Full_System                         ;
 ; Top-level Entity Name              ; ECE_178_Full_System                         ;
@@ -170,8 +170,8 @@ https://fpgasoftware.intel.com/eula.
 ;     Processor 4            ;   0.9%      ;
 ;     Processor 5            ;   0.9%      ;
 ;     Processor 6            ;   0.9%      ;
-;     Processor 7            ;   0.8%      ;
-;     Processor 8            ;   0.8%      ;
+;     Processor 7            ;   0.9%      ;
+;     Processor 8            ;   0.9%      ;
 ;     Processors 9-10        ;   0.8%      ;
 +----------------------------+-------------+
 
@@ -4016,9 +4016,9 @@ Warning (171167): Found invalid Fitter assignments. See the Ignored Assignments 
 Info (144001): Generated suppressed messages file C:/Users/tasker/Projects/ECE_178_Full_System/output_files/ECE_178_Full_System.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 378 warnings
     Info: Peak virtual memory: 6211 megabytes
-    Info: Processing ended: Wed Oct 21 23:29:38 2020
+    Info: Processing ended: Thu Nov 19 03:21:11 2020
     Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:27
+    Info: Total CPU time (on all processors): 00:00:26
 
 
 +----------------------------+
