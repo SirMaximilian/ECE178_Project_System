@@ -578,6 +578,7 @@ set_location_assignment PIN_F14 -to EXT_IO[4]
 set_location_assignment PIN_E10 -to EXT_IO[5]
 set_location_assignment PIN_D9 -to EXT_IO[6]
 set_location_assignment PIN_Y2 -to clk_clk
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE UART_Receiver.sv
 set_global_assignment -name VERILOG_FILE ECE_178_Full_System.v
 set_global_assignment -name QSYS_FILE ../ECE178_nios_system_20_1/ECE178_nios_20_1.qsys
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

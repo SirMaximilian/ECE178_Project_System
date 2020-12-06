@@ -460,6 +460,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPIO[1]",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
