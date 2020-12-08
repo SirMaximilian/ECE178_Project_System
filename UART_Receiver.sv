@@ -21,20 +21,21 @@ module UART_RX
    input        i_RX_Serial,
    output       o_RX_DV,
    output [7:0] o_RX_Byte,
-   output [2:0] o_SM_Main
+   output [2:0] o_SM_Main,
+	output [3:0] o_Bit_Index
    );
    
-  parameter IDLE          = 3'b000;
+  parameter IDLE          = 3'b010;
   parameter RX_START_BIT  = 3'b001;
-  parameter RX_DATA_BITS  = 3'b010;
+  parameter RX_DATA_BITS  = 3'b111;
   parameter RX_PARITY_BIT = 3'b011;
   parameter RX_STOP_BIT_1 = 3'b100;
   parameter RX_STOP_BIT_2 = 3'b101;
-  parameter CLEANUP       = 3'b111;
+  parameter CLEANUP       = 3'b110;
   
   reg [7:0]     r_Clock_Count = 0;
-  reg [2:0]     r_Bit_Index   = 0; //8 bits total + parity
-  reg [7:0]     r_RX_Byte     = 0;
+  reg [3:0]     r_Bit_Index   = 0; //8 bits total + parity
+  reg [DATA_BITS-1:0]     r_RX_Byte     = 0;
   reg           r_RX_DV       = 0;
   reg [2:0]     r_SM_Main     = 0;
   
@@ -116,7 +117,7 @@ module UART_RX
           end
           else
           begin
-       	    r_RX_DV       <= 1'b1;
+       	    r_RX_DV       <= 1'b0;
             r_Clock_Count <= 0;
             r_SM_Main     <= RX_STOP_BIT_2;
           end
@@ -156,5 +157,6 @@ module UART_RX
   assign o_RX_DV   = r_RX_DV;
   assign o_RX_Byte = r_RX_Byte;
   assign o_SM_Main = r_SM_Main;
+  assign o_Bit_Index = r_Bit_Index;
   
 endmodule // UART_RX

@@ -1,0 +1,50 @@
+module decode (in0,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in15,
+out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15,)
+
+	input [15:0]in0,in1,in2,in3,in4,in5,in6,in7,in8,in9,in10,in11,in12,in13,in14,in15;
+	output [10:0]out0,out1,out2,out3,out4,out5,out6,out7,out8,out9,out10,out11,out12,out13,out14,out15;
+	
+	wire [7:0]payload0 = [7:0]in0;
+	wire [7:0]payload1 = [15:8]in0;
+	wire [7:0]payload2 = [7:0]in1;
+	wire [7:0]payload3 = [15:8]in1;
+	wire [7:0]payload4 = [7:0]in2;
+	wire [7:0]payload5 = [15:8]in2;
+	wire [7:0]payload6 = [7:0]in3;
+	wire [7:0]payload7 = [15:8]in3;
+	wire [7:0]payload8 = [7:0]in4;
+	wire [7:0]payload9 = [15:8]in4;
+	wire [7:0]payload10 = [7:0]in5;
+	wire [7:0]payload11 = [15:8]in5;
+	wire [7:0]payload12 = [7:0]in6;
+	wire [7:0]payload13 = [15:8]in6;
+	wire [7:0]payload14 = [7:0]in7;
+	wire [7:0]payload15 = [15:8]in7;
+	wire [7:0]payload16 = [7:0]in8;
+	wire [7:0]payload17 = [15:8]in8;
+	wire [7:0]payload18 = [7:0]in9;
+	wire [7:0]payload19 = [15:8]in9;
+	wire [7:0]payload20 = [7:0]in10;
+	wire [7:0]payload21 = [15:8]in10;
+	//only uses 11 registers if we have 2 bytes in each register
+	);
+	
+	assign out0 = (payload0 | (payload1 << 8)) & 0x07FF;
+	assign out1 = ((payload1 >> 3) | (payload2 << 5)) & 0x07FF;
+	assign out2 = ((payload2 >> 6)| (payload3 << 2) | (payload4 << 10)) & 0x07FF;
+	assign out3 = ((payload4 >> 1) | (payload5 << 7)) & 0x07FF;
+	assign out4 = ((payload5 >> 4) | (payload6 << 4)) & 0x07FF;
+	assign out5 = ((payload6 >> 7)| (payload7 << 1) | (payload8 << 9)) & 0x07FF;
+	assign out6 = ((payload8 >> 2)| (payload9 << 6)) & 0x07FF;
+	assign out7 = ((payload9 >> 5)| (payload10 << 3)) & 0x07FF;
+	assign out8 = (payload11 | (payload12 << 8)) & 0x07FF;
+	assign out9 = ((payload12 >> 3) | (payload13 << 5)) & 0x07FF;
+	assign out10 = ((payload13 >> 6)| (payload14 << 2) | (payload15 << 10)) & 0x07FF;
+	assign out11 = ((payload15 >> 1) | (payload16 << 7)) & 0x07FF;
+	assign out12 = ((payload16 >> 4)| (payload17 << 4)) & 0x07FF;
+	assign out13 = ((payload17 >> 7) | (payload18 << 1) | (payload19 << 9)) & 0x07FF;
+	assign out14= ((payload19 >> 2) | (payload20 << 6)) & 0x07FF;
+	assign out15= ((payload20 >> 5)| (payload21 << 3)) & 0x07FF;
+	
+	
+endmodule

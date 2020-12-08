@@ -452,9 +452,7 @@ set_location_assignment PIN_AC10 -to FL_WE_N
 set_location_assignment PIN_AE11 -to FL_RESET_N
 set_location_assignment PIN_AE12 -to FL_WP_N
 set_location_assignment PIN_Y1 -to FL_RY
-set_location_assignment PIN_AB22 -to GPIO[0]
 set_location_assignment PIN_AC15 -to GPIO[1]
-set_location_assignment PIN_AB21 -to GPIO[2]
 set_location_assignment PIN_Y17 -to GPIO[3]
 set_location_assignment PIN_AC21 -to GPIO[4]
 set_location_assignment PIN_Y16 -to GPIO[5]
@@ -484,7 +482,6 @@ set_location_assignment PIN_AH22 -to GPIO[28]
 set_location_assignment PIN_AF26 -to GPIO[29]
 set_location_assignment PIN_AE20 -to GPIO[30]
 set_location_assignment PIN_AG23 -to GPIO[31]
-set_location_assignment PIN_AF20 -to GPIO[32]
 set_location_assignment PIN_AH26 -to GPIO[33]
 set_location_assignment PIN_AH23 -to GPIO[34]
 set_location_assignment PIN_AG26 -to GPIO[35]
@@ -578,6 +575,8 @@ set_location_assignment PIN_F14 -to EXT_IO[4]
 set_location_assignment PIN_E10 -to EXT_IO[5]
 set_location_assignment PIN_D9 -to EXT_IO[6]
 set_location_assignment PIN_Y2 -to clk_clk
+set_location_assignment PIN_AB21 -to i_GPIO[0]
+set_global_assignment -name SYSTEMVERILOG_FILE sbus_decoder.sv
 set_global_assignment -name SYSTEMVERILOG_FILE UART_Receiver.sv
 set_global_assignment -name VERILOG_FILE ECE_178_Full_System.v
 set_global_assignment -name QSYS_FILE ../ECE178_nios_system_20_1/ECE178_nios_20_1.qsys
