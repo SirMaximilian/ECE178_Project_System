@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="fe84b7fece07245884d1"/>
+    <hash md5_digest_80b="753cdce71061ee8a5e91"/>
   </project>
   <file_info>
     <file device="EP4CE115F29C7" path="ECE_178_Full_System.sof" usercode="0xFFFFFFFF"/>
@@ -139,7 +139,7 @@
   <sld_infos>
     <sld_info hpath="ECE178_nios_20_1:u0" name="u0">
       <assignment_values>
-        <assignment_value text="QSYS_NAME ECE178_nios_20_1 HAS_SOPCINFO 1 GENERATION_ID 1603348126"/>
+        <assignment_value text="QSYS_NAME ECE178_nios_20_1 HAS_SOPCINFO 1 GENERATION_ID 1607443502"/>
       </assignment_values>
       <parameters/>
     </sld_info>

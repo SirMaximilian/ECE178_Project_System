@@ -20,9 +20,9 @@
 // Altera IRQ Mapper
 //
 // Parameters
-//   NUM_RCVRS        : 4
+//   NUM_RCVRS        : 5
 //   SENDER_IRW_WIDTH : 32
-//   IRQ_MAP          : 0:5,1:0,2:1,3:2
+//   IRQ_MAP          : 0:5,1:0,2:1,3:2,4:4
 //
 // -------------------------------------------------------
 
@@ -43,6 +43,7 @@ module ECE178_nios_20_1_irq_mapper
     input                receiver1_irq,
     input                receiver2_irq,
     input                receiver3_irq,
+    input                receiver4_irq,
 
     // -------------------
     // Command Source (Output)
@@ -58,6 +59,7 @@ module ECE178_nios_20_1_irq_mapper
         sender_irq[0] = receiver1_irq;
         sender_irq[1] = receiver2_irq;
         sender_irq[2] = receiver3_irq;
+        sender_irq[4] = receiver4_irq;
     end
 
 endmodule

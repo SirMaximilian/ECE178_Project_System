@@ -47,23 +47,23 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001_default_decode
      parameter DEFAULT_CHANNEL = 2,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 10 
+               DEFAULT_DESTID = 38 
    )
-  (output [92 - 89 : 0] default_destination_id,
-   output [12-1 : 0] default_wr_channel,
-   output [12-1 : 0] default_rd_channel,
-   output [12-1 : 0] default_src_channel
+  (output [96 - 91 : 0] default_destination_id,
+   output [41-1 : 0] default_wr_channel,
+   output [41-1 : 0] default_rd_channel,
+   output [41-1 : 0] default_src_channel
   );
 
   assign default_destination_id = 
-    DEFAULT_DESTID[92 - 89 : 0];
+    DEFAULT_DESTID[96 - 91 : 0];
 
   generate
     if (DEFAULT_CHANNEL == -1) begin : no_default_channel_assignment
       assign default_src_channel = '0;
     end
     else begin : default_channel_assignment
-      assign default_src_channel = 12'b1 << DEFAULT_CHANNEL;
+      assign default_src_channel = 41'b1 << DEFAULT_CHANNEL;
     end
   endgenerate
 
@@ -73,8 +73,8 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001_default_decode
       assign default_rd_channel = '0;
     end
     else begin : default_rw_channel_assignment
-      assign default_wr_channel = 12'b1 << DEFAULT_WR_CHANNEL;
-      assign default_rd_channel = 12'b1 << DEFAULT_RD_CHANNEL;
+      assign default_wr_channel = 41'b1 << DEFAULT_WR_CHANNEL;
+      assign default_rd_channel = 41'b1 << DEFAULT_RD_CHANNEL;
     end
   endgenerate
 
@@ -93,7 +93,7 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001
     // Command Sink (Input)
     // -------------------
     input                       sink_valid,
-    input  [106-1 : 0]    sink_data,
+    input  [110-1 : 0]    sink_data,
     input                       sink_startofpacket,
     input                       sink_endofpacket,
     output                      sink_ready,
@@ -102,8 +102,8 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001
     // Command Source (Output)
     // -------------------
     output                          src_valid,
-    output reg [106-1    : 0] src_data,
-    output reg [12-1 : 0] src_channel,
+    output reg [110-1    : 0] src_data,
+    output reg [41-1 : 0] src_channel,
     output                          src_startofpacket,
     output                          src_endofpacket,
     input                           src_ready
@@ -114,12 +114,12 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001
     // -------------------------------------------------------
     localparam PKT_ADDR_H = 63;
     localparam PKT_ADDR_L = 36;
-    localparam PKT_DEST_ID_H = 92;
-    localparam PKT_DEST_ID_L = 89;
-    localparam PKT_PROTECTION_H = 96;
-    localparam PKT_PROTECTION_L = 94;
-    localparam ST_DATA_W = 106;
-    localparam ST_CHANNEL_W = 12;
+    localparam PKT_DEST_ID_H = 96;
+    localparam PKT_DEST_ID_L = 91;
+    localparam PKT_PROTECTION_H = 100;
+    localparam PKT_PROTECTION_L = 98;
+    localparam ST_DATA_W = 110;
+    localparam ST_CHANNEL_W = 41;
     localparam DECODER_TYPE = 0;
 
     localparam PKT_TRANS_WRITE = 66;
@@ -166,7 +166,7 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001
     assign src_startofpacket = sink_startofpacket;
     assign src_endofpacket   = sink_endofpacket;
     wire [PKT_DEST_ID_W-1:0] default_destid;
-    wire [12-1 : 0] default_src_channel;
+    wire [41-1 : 0] default_src_channel;
 
 
 
@@ -192,20 +192,20 @@ module ECE178_nios_20_1_mm_interconnect_0_router_001
 
     // ( 0x0 .. 0x8000000 )
     if ( {address[RG:PAD0],{PAD0{1'b0}}} == 28'h0   ) begin
-            src_channel = 12'b100;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
+            src_channel = 41'b100;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 38;
     end
 
     // ( 0x8001000 .. 0x8002000 )
     if ( {address[RG:PAD1],{PAD1{1'b0}}} == 28'h8001000   ) begin
-            src_channel = 12'b010;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
+            src_channel = 41'b010;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 10;
     end
 
     // ( 0x8002800 .. 0x8003000 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 28'h8002800   ) begin
-            src_channel = 12'b001;
-            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 8;
+            src_channel = 41'b001;
+            src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 9;
     end
 
 end

@@ -460,6 +460,22 @@
 					"strict" : false
 				},
 				{
+					"name" : "GPIO[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[33]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[34]",
+					"strict" : false
+				},
+				{
+					"name" : "GPIO[35]",
+					"strict" : false
+				},
+				{
 					"name" : "DRAM_DQ[0]",
 					"strict" : false
 				},
@@ -585,6 +601,14 @@
 				},
 				{
 					"name" : "DRAM_DQ[31]",
+					"strict" : false
+				},
+				{
+					"name" : "clk_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_GPIO[0]",
 					"strict" : false
 				},
 				{
